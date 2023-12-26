@@ -1,8 +1,10 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 function App(): React.JSX.Element {
-  return <SafeAreaView style={styles.rootcontainer}></SafeAreaView>;
+  return <SafeAreaView style={styles.rootcontainer}>
+    <Text>CarAssist</Text>
+  </SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
