@@ -67,3 +67,4 @@ yarn-error.log
 
 # User commented
 yarn.lock
+package-lock.json
