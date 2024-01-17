@@ -1,10 +1,9 @@
+import HomeScreen from '@screens/HomeScreen';
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 
 function App(): React.JSX.Element {
-  return <SafeAreaView style={styles.rootcontainer}>
-    <Text>CarAssist</Text>
-  </SafeAreaView>;
+  return <SafeAreaView style={styles.rootcontainer}><HomeScreen/></SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
