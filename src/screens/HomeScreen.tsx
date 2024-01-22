@@ -1,20 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import ParentView from './ParentView';
+import TextButton from '@components/TextButton';
 import { useGlobalStore } from '@state/store';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import ParentView from './ParentView';
 
 const HomeScreen = () => {
-  const {cars, addCar} = useGlobalStore();
-  console.log(cars);
+  const { cars, addCar } = useGlobalStore();
 
   return (
     <ParentView>
-      <Text
-        onPress={() => {
-          addCar('Audi', 'e-tron', 2020);
-        }}>
-        CarAssist
-      </Text>
+      <TextButton
+        title={'Add Car'}
+        onPress={() => addCar('Audi', 'e-tron', 2020)}
+      />
     </ParentView>
   );
 };
