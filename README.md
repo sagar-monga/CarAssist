@@ -12,5 +12,7 @@ Keeps track of all vehicle related stuff so that you don't have to.
 - 
 
 ### TODOS
+- Integrate react navigation
+- State management library (Zustand or RTK)
+- Local database (SQLite, Realm, WatermelonDb or Supabase)
 - Write Tests.
-- 
