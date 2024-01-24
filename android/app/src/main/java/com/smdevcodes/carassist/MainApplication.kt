@@ -1,4 +1,4 @@
-package com.carassist
+package com.smdevcodes.carassist
 
 import android.app.Application
 import com.facebook.react.PackageList

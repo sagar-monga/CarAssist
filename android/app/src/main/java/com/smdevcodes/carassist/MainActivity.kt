@@ -1,4 +1,4 @@
-package com.carassist
+package com.smdevcodes.carassist
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
