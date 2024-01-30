@@ -1,8 +1,8 @@
+import ParentView from '@components/ParentView';
 import TextButton from '@components/TextButton';
 import { useGlobalStore } from '@state/store';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import ParentView from './ParentView';
 
 const HomeScreen = () => {
   const { cars, addCar } = useGlobalStore();
