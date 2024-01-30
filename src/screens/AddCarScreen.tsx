@@ -4,7 +4,7 @@ import { useGlobalStore } from '@state/store';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-const HomeScreen = () => {
+const AddCarScreen = () => {
   const { cars, addCar } = useGlobalStore();
 
   return (
@@ -12,11 +12,12 @@ const HomeScreen = () => {
       <TextButton
         title={'Add Car'}
         onPress={() => addCar('Audi', 'e-tron', 2020)}
+        buttonStyle={{ alignSelf: 'center' }}
       />
     </ParentView>
   );
 };
 
-export default HomeScreen;
+export default AddCarScreen;
 
 const styles = StyleSheet.create({});
