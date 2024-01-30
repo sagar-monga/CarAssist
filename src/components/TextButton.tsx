@@ -8,16 +8,21 @@ import {
   ViewStyle,
 } from 'react-native';
 
-type TextButtonProps = {
-  title: string;
+export type TextButtonProps = {
+  title?: string;
   buttonStyle?: ViewStyle;
   titleStyle?: TextStyle;
-  onPress: () => void;
+  onPress?: () => void;
 };
 
-const TextButton = ({ title, buttonStyle, titleStyle }: TextButtonProps) => {
+const TextButton = ({
+  title = 'Default',
+  buttonStyle,
+  titleStyle,
+  onPress,
+}: TextButtonProps) => {
   return (
-    <Pressable style={[styles.defaultButton, buttonStyle]}>
+    <Pressable style={[styles.defaultButton, buttonStyle]} onPress={onPress}>
       <Text style={[styles.defaultTitle, titleStyle]}>{title}</Text>
     </Pressable>
   );
@@ -28,11 +33,9 @@ export default TextButton;
 const styles = StyleSheet.create({
   defaultButton: {
     backgroundColor: StyleConfig.colors.primary,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignSelf: 'flex-start',
+    padding: 15,
+    borderRadius: StyleConfig.button.RADIUS,
   },
   defaultTitle: {
     color: StyleConfig.colors.light,

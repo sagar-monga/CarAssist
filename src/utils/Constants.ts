@@ -6,5 +6,8 @@ export const StyleConfig = {
         secondary: '#424769',
         tertiary: '#7077a1',
         accent: '#f6b17a'
+    },
+    button: {
+        RADIUS: 10,
     }
 }
