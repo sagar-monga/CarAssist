@@ -1,5 +1,5 @@
+import Router from '@navigation/Router';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '@screens/HomeScreen';
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 
@@ -7,7 +7,7 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.rootcontainer}>
       <NavigationContainer>
-        <HomeScreen />
+        <Router />
       </NavigationContainer>
     </SafeAreaView>
   );
