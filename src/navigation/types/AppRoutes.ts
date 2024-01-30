@@ -1,9 +1,10 @@
-export const BaseRouter = {
-  Authorized: 'Authorized',
-  Unauthorized: 'Unauthorized',
-};
+export enum BaseRouter {
+  Authorized = 'Authorized',
+  Unauthorized = 'Unauthorized',
+}
 
-export const AppRoutes = {
-  Home: 'Home',
-  Login: 'Login',
-};
+export enum AppRoutes {
+  CarList = 'CarList',
+  AddCar = 'AddCar',
+  Login = 'Login',
+}

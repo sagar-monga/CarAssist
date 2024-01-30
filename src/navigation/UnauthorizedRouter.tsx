@@ -7,7 +7,7 @@ const UnauthorizedRoute = createNativeStackNavigator();
 
 const UnauthorizedRouter = () => {
   return (
-    <UnauthorizedRoute.Navigator>
+    <UnauthorizedRoute.Navigator screenOptions={{ headerShown: false }}>
       <UnauthorizedRoute.Screen
         name={AppRoutes.Login}
         component={LoginScreen}

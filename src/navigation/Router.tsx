@@ -7,9 +7,9 @@ import { BaseRouter } from './types/AppRoutes';
 const BaseStack = createNativeStackNavigator();
 
 const Router = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
-    <BaseStack.Navigator screenOptions={{ headerShown: false }}>
+    <BaseStack.Navigator screenOptions={{ title: 'Car Assist' }}>
       {isLoggedIn ? (
         <BaseStack.Screen
           name={BaseRouter.Authorized}
