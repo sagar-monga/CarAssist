@@ -1,37 +1,28 @@
+import CarListItem from '@components/CarListItem';
 import FloatingActionButton from '@components/FloatingActionButton';
+import List, { ListType } from '@components/List';
 import ParentView from '@components/ParentView';
+import NoCars from '@components/emptyStates/NoCars';
 import { useAuthNavigation } from '@navigation/hooks/useAuthNavigation';
 import { AppRoutes } from '@navigation/types/AppRoutes';
 import { useGlobalStore } from '@state/store';
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const CarListScreen = () => {
   const { goTo } = useAuthNavigation();
   const { cars } = useGlobalStore();
 
+  const renderListItem = ({ item }: ListType<Car>) => {
+    return <CarListItem car={item} />;
+  };
+
   return (
     <ParentView>
       {cars.length > 0 ? (
-        <FlatList
-          data={cars}
-          renderItem={({ item }) => {
-            return (
-              <View
-                style={{
-                  backgroundColor: 'red',
-                  padding: 20,
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                }}>
-                <Text>{`${item.make} ${item.model} ${item.year}`}</Text>
-                <Text>{`>`}</Text>
-              </View>
-            );
-          }}
-        />
+        <List data={cars} renderItem={renderListItem} />
       ) : (
-        <Text>No Cars added</Text>
+        <NoCars />
       )}
       <FloatingActionButton
         title="Add New Car"
