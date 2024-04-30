@@ -13,6 +13,8 @@ export type TextButtonProps = {
   buttonStyle?: ViewStyle;
   titleStyle?: TextStyle;
   onPress?: () => void;
+  disabled?: boolean;
+  disabledButtonStyle?: ViewStyle;
 };
 
 const TextButton = ({
@@ -20,9 +22,18 @@ const TextButton = ({
   buttonStyle,
   titleStyle,
   onPress,
+  disabled = false,
+  disabledButtonStyle = {}
 }: TextButtonProps) => {
   return (
-    <Pressable style={[styles.defaultButton, buttonStyle]} onPress={onPress}>
+    <Pressable
+      style={[
+        styles.defaultButton,
+        disabled ? disabledButtonStyle : null,
+        buttonStyle,
+      ]}
+      onPress={onPress}
+      disabled={disabled}>
       <Text style={[styles.defaultTitle, titleStyle]}>{title}</Text>
     </Pressable>
   );
